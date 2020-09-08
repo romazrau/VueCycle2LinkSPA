@@ -1,0 +1,8 @@
+C:\_vue\vue_proj\VuejsAppT18-11\obj\Debug\VuejsAppT18-11.njsprojAssemblyReference.cache
+C:\_vue\vue_proj\VuejsAppT18-11\obj\Debug\VuejsAppT18-11.njsproj.CoreCompileInputs.cache
+C:\_vue\vue_proj\VuejsAppT18-11\bin\Microsoft.NodejsTools.WebRole.dll
+C:\_vue\vue_projects\VuejsSolution1\VuejsAppT18-11\obj\Debug\VuejsAppT18-11.njsproj.CoreCompileInputs.cache
+C:\_vue\vue_projects\VuejsSolution1\VuejsAppT18-11\bin\Microsoft.NodejsTools.WebRole.dll
+C:\_vue-spa\VuejsAppSolution\VuejsAppT18-11\obj\Debug\VuejsAppT18-11.njsprojAssemblyReference.cache
+C:\_vue-spa\VuejsAppSolution\VuejsAppT18-11\obj\Debug\VuejsAppT18-11.njsproj.CoreCompileInputs.cache
+C:\_vue-spa\VuejsAppSolution\VuejsAppT18-11\bin\Microsoft.NodejsTools.WebRole.dll
