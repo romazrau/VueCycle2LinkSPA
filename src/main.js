@@ -15,9 +15,18 @@ Vue.use(VueRouter); //Install a Vue.js plugin: Vue-Router.
 等等
 */
 import App from './App.vue';
-import Home from './containers/Home.vue'
+import Home from './containers/Home.vue';
 import Activity from './containers/Activity.vue';
-import Community from './containers/Community.vue'
+import Community from './containers/Community.vue';
+import Login from './containers/Login.vue';
+import AboutUs from './containers/AboutUs.vue';
+import MapPage from './containers/Map.vue';
+import PersonalManeger from './containers/PersonalManeger.vue'
+
+
+// 匯入執行 JS 檔
+import './javascripts/app'
+
 
 
 //匯入 jQuery
@@ -56,6 +65,26 @@ var routes = [
         name: "community",
         component: Community
     },
+    {
+        path: "/login",
+        name: "login",
+        component: Login
+    },
+    {
+        path: "/about-us",
+        name: "about-us",
+        component: AboutUs
+    },
+    {
+        path: "/map",
+        name: "map",
+        component: MapPage
+    },
+    {
+        path: "/personal-maneger",
+        name: "personal-maneger",
+        component: PersonalManeger
+    }
 
 ];
 var router = new VueRouter({

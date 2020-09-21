@@ -1,4 +1,6 @@
 <template>
+
+        <!-- * home  ****************      ****************       ****************   -->
         <div id="page_home" class="page">
             <!---------------------------------- 主要活動顯示 ---------------------------------->
             <div class="home_top_event">
@@ -17,7 +19,22 @@
                 </div>
                 <div class="home_recent_container">
                     <div class="home_recent_weather">
-                        <img src="/img/home01.png">
+                        <!-- <img src="./img/home01.png"> -->
+                        <div class="home_recent_weather_title">
+                            <h2></h2>
+                            <p></p>
+
+                        </div>
+                        <div class="weather_img_css" style="width:100px; height:100px">
+                            <img id="weather_img" src="" alt="">
+                        </div>
+                        <h4 style="margin:1.5rem 0">未來一周天氣預報</h4>
+                        <div class="Wcontainer home_weather_dflex">
+
+                        </div>
+                        <div class="WTcontainer ">
+
+                        </div>
                     </div>
                     <div class="home_recent_activities">
                         <h2>近期活動</h2>
@@ -87,7 +104,7 @@
                         <ul class="small-block-grid-2 medium-block-grid-3 home_go2_flip_cards">
                             <li ontouchstart="this.classList.toggle('hover');">
                                 <div class="home_card_large home_card_button home_card_front">
-                                    <a href="#community">淨灘</a>
+                                    <a href="#community">環境清潔</a>
                                     <i class="fas fa-broom home_card_icon"></i>
                                 </div>
                                 <div class="home_card_panel home_card_back">
@@ -100,7 +117,7 @@
                             </li>
                             <li ontouchstart="this.classList.toggle('hover');">
                                 <div class="home_card_large home_card_button home_card_front">
-                                    <a href="#community">路跑</a>
+                                    <a href="#community">運動</a>
                                     <i class="fas fa-running home_card_icon"></i>
                                 </div>
                                 <div class="home_card_panel home_card_back">
@@ -113,7 +130,7 @@
                             </li>
                             <li ontouchstart="this.classList.toggle('hover');">
                                 <div class="home_card_large home_card_button home_card_front">
-                                    <a href="#community">教育</a>
+                                    <a href="#community">自然教育</a>
                                     <i class="fas fa-book home_card_icon"></i>
                                 </div>
                                 <div class="home_card_panel home_card_back">
@@ -126,14 +143,17 @@
                             </li>
                             <li ontouchstart="this.classList.toggle('hover');">
                                 <div class="home_card_large home_card_button home_card_front">
-                                    <a href="#community">海洋</a>
-                                    <i class="fas fa-water home_card_icon"></i>
+                                    <a href="#community">志工活動</a>
+                                    <!-- <i class="fas fa-water home_card_icon"></i> -->
+                                    <i class="fas fa-hands-helping home_card_icon"></i>
                                 </div>
                                 <div class="home_card_panel home_card_back">
                                     <div class="home_hub_info">
-                                        <a href="#community">海洋環境</a>
-                                        <i class="fas fa-water home_card_icon"></i>
-                                        <p>今年世界海洋日的主題為「海洋生命Oceans of Life」，希望喚起人們對海洋生物多樣性的認識，透過選出自己喜愛的海洋生物，並一起行動來保護他們。
+                                        <a href="#community">關渡自然公園志工招募</a>
+                                        <!-- <i class="fas fa-water home_card_icon"></i> -->
+                                        <i class="fas fa-hands-helping home_card_icon"></i>
+                                        <p>關渡自然公園長久以來希望從實際體驗及接觸，來讓民眾提高對濕地生態保育的關心。
+                                            透過不同的方式，邀請對自然環境有興趣，且也願意學習服務的你，一同加入我們的行列。
                                         </p>
                                     </div>
                                 </div>
@@ -141,7 +161,7 @@
 
                             <li ontouchstart="this.classList.toggle('hover');">
                                 <div class="home_card_large home_card_button home_card_front">
-                                    <a href="#community">二手換物</a>
+                                    <a href="#community">二手市集</a>
                                     <i class="fas fa-cookie-bite home_card_icon"></i>
                                 </div>
                                 <div class="home_card_panel home_card_back">
@@ -155,14 +175,18 @@
 
                             <li ontouchstart="this.classList.toggle('hover');">
                                 <div class="home_card_large home_card_button home_card_front">
-                                    <a href="#community">森林</a>
-                                    <i class="fas fa-tree home_card_icon"></i>
+                                    <a href="#community">線上活動</a>
+                                    <!-- <i class="fas fa-tree home_card_icon"></i> -->
+                                    <i class="fas fa-globe-americas home_card_icon"></i>
                                 </div>
                                 <div class="home_card_panel home_card_back">
                                     <div class="home_hub_info">
-                                        <a href="#community">森林保育</a>
-                                        <i class="fas fa-tree home_card_icon"></i>
-                                        <p>台灣大規模伐木，以1912年第一列運材火車自二萬坪駛出為嚆矢，數十萬年來守護著美麗之島的蒼鬱森林在數十年內被無情砍伐。</p>
+                                        <a href="#community"></a>
+                                        <i class="fas fa-globe-americas home_card_icon"></i>
+                                        <p>
+                                            今年，誠摯邀請你一起展開 21 天的綠行動旅程、養成綠色習慣，為氣候帶來可能的改變，
+                                            而「宣告」，就是今年的第一個動作。
+                                        </p>
                                     </div>
                                 </div>
                             </li>
@@ -183,6 +207,8 @@
                 </section>
             </div>
         </div>
+
+
 </template>
 
 <script>

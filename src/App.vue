@@ -28,12 +28,34 @@
         </div>
 
         <div class="div_container_login">
-          <div id="navbar_log-in" class="li_menutitle header_nav">
-            <a id="header_link_login" href="#log-in">
+          <div class="navebar_add_icons">
+            <div class="navebar_add_postition_icons">
+              <i id="navebar_plus_icon" class="fas fa-plus navebar_plus_icon"></i>
+              <i id="navebar_down_icon" class="fas fa-angle-down"></i>
+
+              <div id="navebar_down_list" class="navebar_down_list foldingCurtainUp">
+                <button class onclick="location.hash = '#create-activity'">創建活動</button>
+                <button id="changeBack" class onclick="location.hash = '#create-community'">創建社團</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="navebar_msg_icons hide">
+            <!-- <i id="navbar_msg" class="fas fa-bullhorn login_bullhorn"></i> -->
+            <i id="navbar_logout" class="fas fa-sign-out-alt login_bullhorn"></i>
+          </div>
+
+          <div id="navbar_log-in" class="li_menutitle header_nav" v-on:click="isLogin">
+            <router-link
+              :to="{ name: 'login' }"
+              v-on:click="currentRouteName = 'navbar_login'"
+              id="header_link_login"
+              href="#log-in"
+            >
               Log
               in
               <br />登入
-            </a>
+            </router-link>
           </div>
         </div>
 
@@ -45,55 +67,7 @@
       </nav>
     </header>
 
-    <div class="upTop">
-      <i class="far fa-arrow-alt-circle-up fa-2x"></i>
-    </div>
-    <!-- * 懸浮icon -->
-      <div class="chat_container">
-    <div class="chat_icon_container">
-      <img src="/img/talk.png" class="chat_icon_main" alt="聊天" />
-      <img
-        id="chat_robot_icon"
-        src="/img/icons8-broken-robot-100.png"
-        class="chat_icon widthAndHeight2Zero"
-        alt="客服"
-      />
-      <img
-        id="chat_friend_icon"
-        src="/img/icons8-user-group-100.png"
-        class="chat_icon widthAndHeight2Zero"
-        alt="我的聯絡人"
-      />
-    </div>
-
-    <!-- * 聊天機器人 -->
-    <div class="chat_robot_room_window hide">
-      <img
-        id="chat_robot_window_close"
-        class="chat_window_close"
-        src="/img/times-solid.svg"
-        alt="X"
-      />
-      <div id="chat_message_window_title" class="chat_window_title">聊天機器人</div>
-      <div id="chat_robot_message" class="chat_message">訊息</div>
-      <div class="chat_input">
-        <textarea
-          placeholder="想說什麼呢?"
-          onfocus="this.placeholder=''"
-          onblur="this.placeholder='想說什麼呢?'"
-          row="2"
-        ></textarea>
-      </div>
-    </div>
-
-    <div class="chat_list_window hide">
-      <img id="chat_list_window_close" class="chat_window_close" src="/img/times-solid.svg" alt="X" />
-      <div class="chat_window_title">聊天列表</div>
-      <ul class="chat_list">
-        <!-- 列表 -->
-      </ul>
-    </div>
-  </div>
+    <con-chat></con-chat>
 
     <div class="page_container">
       <keep-alive>
@@ -167,7 +141,8 @@
 </template>
 
 <script>
-import chat from './containers/Chat';
+import conChat from "./containers/Chat";
+import ClsNavbar from "./javascripts/navbar";
 
 export default {
   data: function () {
@@ -202,7 +177,21 @@ export default {
       ],
     };
   },
-  components: { chat },
+  components: { conChat },
+  mounted: function () {
+    new ClsNavbar();
+  },
+  methods: {
+    isLogin: function () {
+      this.currentRouteName = 'navbar_login';
+      if (
+        localStorage.getItem("Cycle link user data") &&
+        localStorage.getItem("Cycle link token")
+      ) {
+        this.$router.push({name: "personal-maneger"});
+      }
+    },
+  },
 };
 </script>
 

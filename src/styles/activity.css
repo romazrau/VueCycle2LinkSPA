@@ -29,7 +29,7 @@
     padding-left: 20px;
     height: 60px;
     width: 500px;
-    font-size: 30px;
+    font-size: 1rem;
     border: 1px solid var(--lightgrey-color);
     border-radius: 10px;
 }
@@ -44,7 +44,6 @@
     color: gray;
     border: 1px solid #ffffff;
     outline: none;
-
 }
 
 #activity_option option {
@@ -135,7 +134,7 @@
     background-color: var(--blue-color);
     border: 0px;
     border-radius: 10px;
-    font-size: 36px;
+    font-size: 1.2rem;
     color: white;
     text-align: center;
 }
@@ -169,7 +168,6 @@
     max-width: 1200px;
     margin: 0 auto;
 }
-
 
 
 /*
@@ -213,6 +211,8 @@
     color: white;
 }
 
+/* 社團活動卡片 */
+
 
 
 
@@ -236,6 +236,8 @@
     height: 18rem;
     border-radius: 0.6rem;
     margin: 0 1rem;
+    box-shadow: 1px 1px 25px rgba(167, 167, 167, 0.384);
+
 }
 
 .active_card_img {
@@ -285,7 +287,40 @@
     top: 1rem;
     width: 1.5rem;
     height: 1.5rem;
-    color: white;
+    color: rgb(245, 245, 245);
+}
+
+.active_detail_card_heart_link {
+    border: 0;
+    background-color: rgb(223, 223, 223);
+    border: 2px solid var(--lightblue-color);
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    margin-left: 1rem;
+
+}
+
+.active_detail_card_heart_link:hover {
+    /* background-color: white; */
+    /* border: 1px solid var(--blue-color); */
+    /* transition: all 0.6s; */
+    /* background-color: white; */
+}
+
+.active_detail_card_heart {
+    position: absolute;
+    right: 1.7rem;
+    top: 0.8rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    color: white
+}
+
+.active_detail_card_heart:hover {
+    cursor: pointer;
+    color: var(--lightblue-color);
+    transition: all 0.6s;
 }
 
 .active_card_heart:hover {
@@ -293,6 +328,12 @@
     color: var(--lightblue-color);
     transition: all 0.6s;
 }
+
+/* 點讚後更換的顏色*/
+.actlikecolor {
+    color: var(--lightblue-color) !important;
+}
+
 
 .active_card_title {
     border-bottom: 1px solid rgb(206, 206, 206);
@@ -307,10 +348,21 @@
 }
 
 .search_box {
+    margin:0 2rem 0 2rem;
     width: 150px;
-    height: 150px;
-    background-color: rgb(103, 160, 197);
-    /* transition: width 2s ease-out 10s; */
+    border: 1px solid black;
+    border-radius: 10px;
+    height: min-content ;
+ 
+}
+
+.search_dbox {
+    width: 350px;
+    border: 1px solid black;
+    border-radius: 10px;
+    height: min-content ;
+    
+    /* background-color: rgba(103, 160, 197, 0.384); */
 }
 
 .search_hidden {
@@ -319,11 +371,12 @@
 
 .search_citytext {
     text-align: center;
-    line-height: 150px;
+    padding-top: 2px;
+    /* line-height: 150px; */
 }
 
 .search_city_detail {
-    background-color: rgb(95, 160, 111);
+    /* background-color: rgba(103, 160, 197, 0.384); */
     /* justify-content: center; */
     text-align: center;
 }
@@ -338,6 +391,65 @@
     margin: 1rem 2.5rem 1rem 1rem;
 }
 
+.search_datetext {
+    text-align: center;
+    padding: 0 1rem
+}
+
+.bccolorwhite {
+    background-color: white !important;
+}
+
+#ac_date_start_from{
+    border-radius: 10px;
+}
+#ac_date_end_from{
+    border-radius: 10px;
+}
+
 #activity_card_ALL {
     display: block;
+}
+
+
+/******************* RWD*******************/
+
+
+@media(max-width: 800px){
+
+
+
+.activity_search_container {
+    left: 15vw;
+}
+
+.active_main_search input {
+    width: 70vw;
+}
+
+.active_main_search select {
+    top: 5rem;
+    left: 0;
+    border-radius: 10px;
+}
+
+.activity_top button {
+    left: calc(15vw + 150px);
+    top: 20rem;
+    width: 80px;
+    height: 55px;
+    border-radius: 10px;
+}
+
+.rwd_activity_divFormainImg{
+    position: relative;
+}
+
+
+.rwd_activity_mainImg{
+ /* position: absolute; */
+ /* left: 0px; */
+ /* left: -50px; */
+}
+
 }

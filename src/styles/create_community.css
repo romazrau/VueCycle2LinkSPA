@@ -3,8 +3,13 @@
   display: flex;
 } */
 
+
 .create_community_flex {
   display: flex;
+}
+
+.create_community_flex_wrap{
+  flex-wrap: wrap;
 }
 
 .create_community_ml {

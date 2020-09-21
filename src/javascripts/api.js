@@ -3,6 +3,9 @@ const rootURL = "http://localhost:3050";
 const serverURL = {
   root: rootURL,
   login: `${rootURL}/users/login`,
+  users: `${rootURL}/users/`,
+  userDetail: `${rootURL}/users/detail/me`,
+  forgetPassword: `${rootURL}/users/Forget/Password`,
   test: `${rootURL}/test/`,
   postslist: `${rootURL}/posts/`,
   article: `${rootURL}/article/`,
@@ -15,11 +18,37 @@ const serverURL = {
   activeseen: `${rootURL}/active/activeseen`,
   articlepost: `${rootURL}/article/post`,
   articlereply: `${rootURL}/article/reply`,
-  articlesearch: `${rootURL}/article/search`,
+  articlesearch: `${rootURL}/article/`,
+  articleuser: `${rootURL}/article/userinfo`,
+  articlebycommunity: `${rootURL}/article/community/`,
+  addarticle: `${rootURL}/article/add`,
+  hottiestcommunity: `${rootURL}/article/hottiest/`,
+  explorecommunity: `${rootURL}/article/explore`,
+  txtsearchcommunitycard: `${rootURL}/article/txtsearchcard/`,
+  txtsearchcommunityarticle: `${rootURL}/article/txtsearcharticle/`,
+  displayarticleforedit: `${rootURL}/article/edit/display/`,
+  // editarticle: `${rootURL}/article/edit/`,
+  editarticle: `${rootURL}/article/edit/`,
   homePages: `${rootURL}/home/`,
   community: `${rootURL}/community/`,
-  communityManager: `${rootURL}/community/communityManager/`
+  communityManager: `${rootURL}/community/communityManager/`,
+  communityMember: `${rootURL}/community/communityById_communityMember/`,
+  communityMemberAccessRight: `${rootURL}/community/members/`,
+  communityList:`${rootURL}/community/communityByMemberId/`,
+  creatCommunity: `${rootURL}/`,
+  activeinsertseensql: `${rootURL}/active/activeinsertseensql/`,
+  activeforyou: `${rootURL}/active/activeforyou/`,
+  getActByCommunityId: `${rootURL}/active/by/community/`,
+  likes: `${rootURL}/like/`,
+  addlikes: `${rootURL}/like/add`,
+  removelikes: `${rootURL}/like/remove`,
+  addActLikeToSQL: `${rootURL}/active/addActLikeToSQL`,
+  addReply: `${rootURL}/reply`,
+  removeactlikesql: `${rootURL}/active/removeactlikesql`,
+  getChatroom: `${rootURL}/chat/`,
+  getChatmessage: `${rootURL}/chat/messages/`,
 };
+
 
 
 const checkLogin = async () => {
@@ -34,7 +63,6 @@ const checkLogin = async () => {
     cache: "no-cache", // 不准使用快取
     headers: {
       // *攜帶 http request headers
-      "Content-Type": "application/json",
       Authorization: localStorage.getItem("Cycle link token"), // *這個屬性帶 JWT
     },
   });
@@ -42,6 +70,5 @@ const checkLogin = async () => {
   let result = await respone.json();
   return result; // 回傳身分解析結果
 };
-// checkLogin()
 
 export { serverURL, checkLogin };
